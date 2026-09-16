@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دنیای پاپی پلی‌تایم | دکتر هارلی</title>
+    <style>
+        :root { --blue: #00bcd4; --green: #4caf50; --dark: #121212; }
+        body { background: var(--dark); color: white; font-family: 'Tahoma', sans-serif; margin: 0; padding: 20px; }
+        header { text-align: center; border-bottom: 3px solid var(--blue); padding: 20px; }
+        .hero { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
+        .hero img { width: 150px; height: 150px; border: 2px solid var(--green); border-radius: 10px; }
+        .chat-box { background: #222; padding: 20px; border-radius: 15px; border-left: 5px solid var(--green); }
+        input { width: 80%; padding: 10px; margin-top: 10px; }
+        button { padding: 10px 20px; background: var(--blue); color: white; border: none; cursor: pointer; }
+        #ai-response { margin-top: 20px; color: var(--green); min-height: 50px; }
+        .card { background: #1e1e1e; padding: 15px; margin: 10px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ساخته شده توسط کانال دکتر هارلی</h1>
+    <a href="https://rubika.ir/poopy_play_time_harley_sawyer" style="color: var(--blue);">ورود به کانال روبیکا ما</a>
+</header>
+
+<section class="hero">
+    <img src="Doy.jpg" alt="Doy">
+    <img src="Harley1.jpg" alt="Harley1">
+    <img src="Harley.jpg" alt="Harley">
+    <img src="Huggy.jpg" alt="Huggy">
+    <img src="Prototype.jpg" alt="Prototype">
+    <img src="Lily.jpg" alt="Lily">
+</section>
+
+<div class="chat-box">
+    <h3>🤖 هوش مصنوعی دکتر هارلی (فوق‌هوشمند)</h3>
+    <input type="text" id="userInput" placeholder="چی می‌خوای بدونی؟ (شخصیت‌ها، چپترها، تئوری‌ها...)">
+    <button onclick="askAI()">بپرس!</button>
+    <div id="ai-response">منتظر سوال شما هستم...</div>
+</div>
+
+<section id="content">
+    <h2>اطلاعات بازی</h2>
+    <div class="card"><h3>هگی واگی:</h3> قاتلِ آبی، نمادِ وحشت کارخانه.</div>
+    <div class="card"><h3>پروتوتایپ:</h3> موجود مرموز که همه عروسک‌ها رو کنترل می‌کنه.</div>
+</section>
+
+<button onclick="surprise()" style="margin-top:20px; background: red;">سوپرایز ویژه دکتر هارلی!</button>
+
+<script>
+    const knowledge = {
+        "هگی": "هگی واگی اولین کابوس ما بود! یه عروسک که از انتقام ساخته شده.",
+        "پروتوتایپ": "پروتوتایپ یعنی پایان! اون همه چیز رو کنترل می‌کنه و به دنبالِ کماله.",
+        "چپتر": "چپتر ۱ آغازِ وحشت بود، چپتر ۲ مامی لانگ‌لگز و... هرچی جلوتر میریم، تاریک‌تر میشه!",
+        "هارلی": "دکتر هارلی کسیه که تمامِ اسرارِ مخفیِ این کارخانه رو کشف کرده."
+    };
+
+    function askAI() {
+        const input = document.getElementById('userInput').value;
+        const output = document.getElementById('ai-response');
+        let found = false;
+        for (let key in knowledge) {
+            if (input.includes(key)) {
+                output.innerText = "دکتر هارلی می‌گوید: " + knowledge[key];
+                found = true;
+            }
+        }
+        if (!found) output.innerText = "دکتر هارلی: این تئوری رو هنوز کامل نکردم، اما دارم روش تحقیق می‌کنم!";
+    }
+
+    function surprise() {
+        alert("تئوری لو رفته: تمام عروسک‌ها در واقع انسان‌هایی بودن که آزمایش شدن!");
+    }
+</script>
+
+</body>
+</html>
+
+adius: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 5px;
+        }
+
+        input, textarea {
+            flex: 1;
+            background: #000;
+            border: 1px solid #444;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        button.action-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* --- دکمه کانال --- */
+        .rubika-btn {
+            display: block;
+            width: fit-content;
+            margin: 60px auto;
+            padding: 20px 50px;
+            background: linear-gradient(45deg, #ff0000, #8b0000);
+            color: white;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 100px;
+            box-shadow: 0 0 20px var(--accent);
+            transition: 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .rubika-btn:hover {
+            letter-spacing: 2px;
+            box-shadow: 0 0 40px var(--accent);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="controls">
+    <button class="control-btn" onclick="setTheme('dark')">🌑 Dark</button>
+    <button class="control-btn" onclick="setTheme('light')">☀️ Light</button>
+    <button class="control-btn" onclick="setTheme('blood')">🩸 Blood Mode</button>
+    <hr>
+    <button class="control-btn" onclick="setLang('fa')">فارسی</button>
+    <button class="control-btn" onclick="setLang('en')">English</button>
+</div>
+
+<header>
+    <h1 id="main-title">دنیای پاپّی پلی‌تایم</h1>
+    <p class="creator-badge" id="sub-title">ساخته شده توسط کانال دکتر هارلی</p>
+</header>
+
+<div class="container">
+    
+    <section id="characters">
+        <h2 class="section-title" id="char-title">شخصیت‌های اصلی</h2>
+        <div class="grid" id="char-grid">
+            <!-- شخصیت‌ها توسط جاوااسکریپت اینجا رندر می‌شوند -->
+        </div>
+    </section>
+
+    <section id="chapters">
+        <h2 class="section-title" id="chap-title">فصل‌های داستان</h2>
+        <div id="chapters-container">
+            <!-- فصل‌ها اینجا می‌آیند -->
+        </div>
+    </section>
+
+    <div class="interactive-zone">
+        <!-- بخش هوش مصنوعی -->
+        <div class="chat-box">
+            <h3 id="ai-title">سوال از هوش مصنوعی</h3>
+            <div id="chat-display"></div>
+            <div class="input-group">
+                <input type="text" id="chat-input" placeholder="چی می‌خوای بدونی؟">
+                <button class="action-btn" onclick="askAI()">بپرس</button>
+            </div>
+        </div>
+
+        <!-- بخش نظرات -->
+        <div class="comment-box">
+            <h3 id="comm-title">نظرات طرفداران</h3>
+            <div id="comment-display"></div>
+            <div class="input-group" style="flex-direction: column;">
+                <input type="text" id="user-name" placeholder="نام شما">
+                <textarea id="user-msg" placeholder="نظر شما..."></textarea>
+                <button class="action-btn" onclick="postComment()">ارسال نظر</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://rubika.ir/poopy_play_time_harley_sawyer" class="rubika-btn" id="rubika-text">🚀 ورود به کانال روبیکا</a>
+
+</div>
+
+<footer id="footer-text">
+    © 2026 Dr. Harley Channel - All Rights Reserved
+</footer>
+
+<script>
+    // --- دیتابیس محتوا ---
+    const content = {
+        fa: {
+            title: "دنیای پاپّی پلی‌تایم",
+            sub: "ساخته شده توسط کانال دکتر هارلی",
+            charTitle: "شخصیت‌های مرموز",
+            chapTitle: "فصل‌های وحشت",
+            aiTitle: "دستیار هوشمند دکتر هارلی",
+            commTitle: "بخش نظرات",
+            rubika: "🚀 برو به کانال روبیکا",
+            footer: "© ۲۰۲۶ تمامی حقوق برای کانال دکتر هارلی محفوظ است"
+        },
+        en: {
+            title: "Poppy Playtime Universe",
+            sub: "Created by Dr. Harley Channel",
+            charTitle: "Mysterious Characters",
+            chapTitle: "Horror Chapters",
+            aiTitle: "Dr. Harley AI Assistant",
+            commTitle: "Fan Comments",
+            rubika: "🚀 Join Rubika Channel",
+            footer: "© 2026 Dr. Harley Channel - All Rights Reserved"
+        }
+    };
+
+    const characters = [
+        { name: "Huggy Wuggy", desc: "موجود آبی رنگ و مهیب!", img: "Huggy.jpg" },
+        { name: "Kissy Missy", desc: "همراه مهربان اما خطرناک هاگی.", img: "Kissy.jpg" },
+        { name: "Poppy", desc: "عروسک مرموزی که همه چیز را می‌داند.", img: "Poppy.jpg" },
+        { name: "Dr. Harley", desc: "مغز متفکر پشت آزمایش‌ها.", img: "Harley.jpg" },
+        { name: "The Prototype", desc: "ترسناک‌ترین موجود آزمایشگاه.", img: "Prototype.jpg" },
+        { name: "Leila Love Breed", desc: "دختر با موهای ارغوانی و اسرار پنهان.", img: "Leila.jpg" }
+    ];
+
+    // --- موتور سایت ---
+
+    // رندر شخصیت‌ها
+    function renderChars() {
+        const grid = document.getElementById('char-grid');
+        grid.innerHTML = characters.map(c => `
+            <div class="character-card">
+                <img src="${c.img}" alt="${c.name}" onerror="this.src='https://via.placeholder.com/250x250?text=No+Image'">
+                <div class="info">
+                    <h3>${c.name}</h3>
+                    <p>${c.desc}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // تغییر تم
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+    }
+
+    // تغییر زبان
+    function setLang(lang) {
+        const c = content[lang];
+        document.getElementById('main-title').innerText = c.title;
+        document.getElementById('sub-title').innerText = c.sub;
+        document.getElementById('char-title').innerText = c.charTitle;
+        document.getElementById('chap-title').innerText = c.chapTitle;
+        document.getElementById('ai-title').innerText = c.aiTitle;
+        document.getElementById('comm-title').innerText = c.commTitle;
+        document.getElementById('rubika-text').innerText = c.rubika;
+        document.getElementById('footer-text').innerText = c.footer;
+        
+        // تغییر جهت متن
+        document.body.dir = (lang === 'fa') ? 'rtl' : 'ltr';
+    }
+
+    // هوش مصنوعی (AI Logic)
+    function askAI() {
+        const input = document.getElementById('chat-input');
+        const display = document.getElementById('chat-display');
+        const val = input.value.trim();
+        if(!val) return;
+
+        display.innerHTML += `<div style="text-align:left; color:var(--accent)">شما: ${val}</div>`;
+        
+        let reply = "من هنوز دارم یاد می‌گیرم، اما دکتر هارلی حتماً جواب میده!";
+        
+        if(val.includes("سلام")) reply = "سلام! آماده‌ای برای یک ماجراجویی ترسناک؟";
+        if(val.includes("هاگی")) reply = "او خیلی گرسنه است، مراقب باش!";
+        if(val.includes("هارلی")) reply = "دکتر هارلی همیشه همه چیز را تحت کنترل دارد.";
+        if(val.includes("چپتر")) reply = "ما در حال بررسی فصل‌های جدید هستیم!";
+
+        setTimeout(() => {
+            display.innerHTML += `<div style="text-align:right; color:white">AI: ${reply}</div>`;
+            display.scrollTop = display.scrollHeight;
+        }, 800);
+        
+        input.value = "";
+    }
+
+    // سیستم نظرات
+    function postComment() {
+        const name = document.getElementById('user-name').value;
+        const msg = document.getElementById('user-msg').value;
+        const display = document.getElementById('comment-display');
+
+        if(name && msg) {
+            display.innerHTML += `<div class="comment-item"><strong>${name}:</strong> ${msg}</div>`;
+            document.getElementById('user-name').value = "";
+            document.getElementById('user-msg').value = "";
+            display.scrollTop = display.scrollHeight;
+        }
+    }
+
+    // اجرای اولیه
+    renderChars();
+</script>
+
+</body>
+</html>
+
+ textInput = document.getElementById('comment-text');
+        const list = document.getElementById('comment-list');
+
+        if (nameInput.value.trim() === "" || textInput.value.trim() === "") {
+            alert("لطفاً نام و نظر خود را وارد کنید!");
+            return;
+        }
+
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment-item');
+        newComment.innerHTML = `<strong>${nameInput.value}:</strong> ${textInput.value}`;
+        
+        list.prepend(newComment); // اضافه کردن به ابتدای لیست
+
+        // پاک کردن ورودی‌ها
+        nameInput.value = "";
+        textInput.value = "";
+    }
+</script>
+
+</body>
+</html>
+
